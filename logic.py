@@ -5,6 +5,7 @@
 
 
 import json
+from shutil import move
 from matplotlib.pyplot import title
 import pandas as pd
 path = "C:/Users/Wafik/PycharmProjects/MovieRecommendation/data"
@@ -165,7 +166,8 @@ def get_recommendations(title, cosine_sim=cosine_sim2):
     # (a, b) where a is id of movie, b is similarity_scores
     movies_indices = [ind[0] for ind in similarity_scores]
     movies = movies_df["title"].iloc[movies_indices]
-    return movies
+    titles = [movie for movie in movies]
+    return titles
 
 
 # In[123]:

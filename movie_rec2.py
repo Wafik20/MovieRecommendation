@@ -6,7 +6,7 @@ import logic
 import numpy as np
 import pandas as pd
 
-countries = logic.titles
+titles = logic.titles
 
 ws = Tk()
 ws.title('Movie Recommendations')
@@ -27,7 +27,7 @@ entry = AutocompleteCombobox(
     frame,
     width=20, 
     font=('Times', 18),
-    completevalues=countries
+    completevalues=titles
     )
 def print_rec():
     text_box.config(state = NORMAL)
